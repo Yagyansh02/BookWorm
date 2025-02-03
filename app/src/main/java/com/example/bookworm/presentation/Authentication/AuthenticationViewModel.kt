@@ -14,7 +14,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AuthenticationViewModel @Inject constructor(
-    private val repository: AuthenticationRepositoryImpl
+    private val repository: AuthenticationRepositoryImpl,
 ): ViewModel() {
 
     private val _authState = MutableStateFlow<NetworkResponse<AuthApiResponse>?>(null)
@@ -22,7 +22,11 @@ class AuthenticationViewModel @Inject constructor(
     private val _isUserAuthenticated = MutableStateFlow(false)
     val isUserAuthenticated: StateFlow<Boolean> = _isUserAuthenticated
 
-    fun isUserAuthenticated() {
+    init {
+        isUserAuthenticated()
+    }
+
+    private fun isUserAuthenticated() {
         viewModelScope.launch {
             _isUserAuthenticated.value = repository.isUserAuthenticated()
         }
@@ -50,6 +54,13 @@ class AuthenticationViewModel @Inject constructor(
                 _authState.value = NetworkResponse.Error("Sign-up failed: ${e.localizedMessage}")
                 Log.d("AuthenticationViewModel", "signUp: ${e.localizedMessage}")
             }
+        }
+    }
+    fun signOut() {
+        viewModelScope.launch {
+            repository.signOut()
+            _isUserAuthenticated.value = false
+            _authState.value = null
         }
     }
 

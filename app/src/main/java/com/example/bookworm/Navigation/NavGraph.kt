@@ -40,8 +40,8 @@ fun NavGraph(
         composable(route = Screens.HomeScreen.route) {
             HomeScreen(
                 onSearchClickButton = { navController.navigate(Screens.SearchScreen.route) },
-
-                )
+                onSignoutClick = { navController.navigate(Screens.LoginScreen.route) }
+            )
         }
         composable(route = Screens.SearchScreen.route) {
             SearchScreen()

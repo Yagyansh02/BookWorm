@@ -68,13 +68,16 @@ import com.example.bookworm.R
 import com.example.bookworm.domain.models.BooksResponse
 import com.example.bookworm.domain.models.BooksResponseItem
 import com.example.bookworm.domain.models.User
+import com.example.bookworm.presentation.Authentication.AuthenticationViewModel
 import com.example.bookworm.utils.NetworkResponse
 
 
 @Composable
 fun HomeScreen(
     viewModel: BookViewModel = hiltViewModel(),
+    authViewModel: AuthenticationViewModel = hiltViewModel(),
     onSearchClickButton: () -> Unit,
+    onSignoutClick: () -> Unit
 ) {
     val primaryColor = colorResource(R.color.primary_color)
     val primaryVariantColor = colorResource(R.color.primary_variant_color)
@@ -96,7 +99,9 @@ fun HomeScreen(
         topBar = {
             ModernTopAppBar(
                 onSearchClick = onSearchClickButton,
-                onNotificationClick = { }
+                onNotificationClick = {authViewModel.signOut()
+                    onSignoutClick()
+                }
             )
         },
         bottomBar = {

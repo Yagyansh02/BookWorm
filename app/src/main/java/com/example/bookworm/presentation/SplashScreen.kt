@@ -1,5 +1,6 @@
 package com.example.bookworm.presentation
 
+import android.util.Log
 import android.view.animation.OvershootInterpolator
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.LinearEasing
@@ -44,6 +45,7 @@ import kotlinx.coroutines.delay
 fun SplashScreen(navController: NavController, authViewModel: AuthenticationViewModel = hiltViewModel()) {
 
     val authValue by authViewModel.isUserAuthenticated.collectAsState()
+    Log.d("SplashScreen", "Auth value: $authValue")
 
     // State for scale and alpha animation
     val scale = remember { Animatable(0f) }
