@@ -69,24 +69,7 @@ The backend is developed using Node.js and Express. To set up and run the backen
 2. Use the app to manage your book collection, track reading progress, and discover new books.
 3. The backend server handles user authentication and data storage.
 
-## Contributing
 
-Contributions are welcome! Please follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Make your changes and commit them:
-   ```bash
-   git commit -m "Add feature"
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature-name
-   ```
-5. Open a pull request.
 
 ## License
 
