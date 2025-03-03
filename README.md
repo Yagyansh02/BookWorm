@@ -50,6 +50,7 @@ The backend is developed using Node.js and Express. To set up and run the backen
 - Dagger Hilt
 - Jetpack Compose
 - Navigation Component
+- Retrofit
 
 ### Backend
 
