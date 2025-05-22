@@ -12,12 +12,12 @@ BookWorm is an Android app designed to enhance your reading experience. Develope
 📸 Example:
 
 <p align="center">
-  <img src="screenshots/1.png" alt="Screenshot 1" width="300" style="margin-right: 10px;"/>
-  <img src="screenshots/2.png" alt="Screenshot 2" width="300"/>
+  <img src="screenshots/1.jpeg" alt="Screenshot 1" width="300" style="margin-right: 10px;"/>
+  <img src="screenshots/2.jpeg" alt="Screenshot 2" width="300"/>
 </p>
 <p align="center">
-  <img src="screenshots/3.png" alt="Screenshot 3" width="300" style="margin-right: 10px;"/>
-  <img src="screenshots/4.png" alt="Screenshot 4" width="300"/>
+  <img src="screenshots/3.jpeg" alt="Screenshot 3" width="300" style="margin-right: 10px;"/>
+  <img src="screenshots/4.jpeg" alt="Screenshot 4" width="300"/>
 </p>
 
 ## Installation
